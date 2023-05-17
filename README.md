@@ -24,6 +24,6 @@ Key components used:
 5) The best quote out of all provided is displayed to solver as the best solution that he may pick to offer CoW driver as a path
 6) If accepted as the best solution, CoW driver will activate MooMaker smart contract swap function which will check validity of signed quote and execute swap by transfering tokens between the winning MM and CoW driver.
 
-<img width="637" alt="image" src="https://github.com/MooMaker/General-overview/assets/105652074/8cdaffa2-3cee-47be-9645-08f0066b54db">
+<img width="637" alt="image" src="https://github.com/MooMaker/General-overview/assets/105652074/3d811e3a-f3c3-4d3d-a978-6cf9c316cb16">
 
 
