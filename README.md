@@ -3,7 +3,7 @@
 MooMaker introduces framework for individual market makers to price CoW swap user orders through offchain signed bids. A designated CoW solver receives batch data and sends request to makers to swap particular tokens launching an offchain auction. During auction makers submit their EIP-712 signed bids and the best bid is displayed to solver as a solution which he may pick as the best one to pass to CoW driver.   
 
 Purpose of MooMaker:
-- Provide a direct way for market makers to price COW orders with optimized smart contract infrastructure for efficient COW-MM settlement. Current flow for solvers might include RFQ systems like Hashflow that may not be optimized for COW batch settlement due to timing and latency.  
+- Provide a direct way for market makers to price COW orders with optimized smart contract infrastructure for efficient COW-MM settlement. Current flow for solvers might include RFQ systems like Hashflow that may not be optimized for COW batch settlement due to issues of timing and latency. MooMaker introduces an RFQ like system that is directly compatable with existing CoWswap flow ensuring stability of fills.   
 
 - Proffesional market makers on centralized exchanges who have high fee tiers are normally able to provide very attractive prices to onchain traders due to their ability to effectively hedge each trade on their side. By providing a last second auction, MooMaker aims to provide market makers with a low latency trading experience which would encourage tight spreads and less exposure to toxic flow. 
 
