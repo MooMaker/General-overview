@@ -3,9 +3,11 @@
 MooMaker introduces framework for individual market makers to price CoW swap users through offchain signed bids. A designated CoW solver receives batch data and sends request to makers to swap particular tokens launching an offchain auction. During auction makers submit their EIP-712 signed bids and the best bid is displayed to solver as a solution which he may pick as the best one to pass to CoW driver.   
 
 Purpose of MooMaker:
--Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at times due to gas costs and limited locked liquidity in the pool. MooMaker gives an opportunity to settle cow batches using private liquidity which is likely to yield better prices on many occasions compared to AMMs. 
--Private liquidity may include proffesional market makers on centralized exchanges who have high fee tietr. Such players can normally provide very attractive prices to onchain traders due to their ability to effecctively hedge each trade on their side. 
--Open offchain auction sparkles competition among market makers as they see every quote provided by each maker. This gives them them stimulus to outbid each other deriving the best possible price for cow user.
+-Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at times due to gas costs and limited locked liquidity in the pool. MooMaker gives an opportunity to settle cow batches using private liquidity which is likely to yield better prices on many occasions compared to AMMs
+
+-Private liquidity may include proffesional market makers on centralized exchanges who have high fee tietr. Such players can normally provide very attractive prices to onchain traders due to their ability to effecctively hedge each trade on their side
+
+-Open offchain auction sparkles competition among market makers as they see every quote provided by each maker. This gives them them stimulus to outbid each other deriving the best possible price for cow user
 
 Key components used: 
 
