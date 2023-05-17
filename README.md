@@ -23,5 +23,6 @@ Key components used:
 4) MMs submit their EIP-712 signed bids through websocket to MooMaker offchain service
 5) The best quote out of all provided is displayed to solver as the best solution that he may pick to offer CoW driver as a path
 
-<img width="590" alt="image" src="https://github.com/MooMaker/General-overview/assets/105652074/72da7e82-3807-4123-ae17-02946d4cb89d">
+<img width="643" alt="image" src="https://github.com/MooMaker/General-overview/assets/105652074/d7b0ebb1-6a64-44d7-97a5-2821907f530b">
+
 
