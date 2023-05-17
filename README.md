@@ -6,9 +6,9 @@ Purpose of MooMaker:
 
 -Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at times due to gas costs and limited locked liquidity in the pool. MooMaker gives an opportunity to settle cow batches using private liquidity which is likely to yield better prices on many occasions compared to AMMs
 
--Private liquidity may include proffesional market makers on centralized exchanges who have high fee tietr. Such players can normally provide very attractive prices to onchain traders due to their ability to effecctively hedge each trade on their side
+-Private liquidity may include proffesional market makers on centralized exchanges who have high fee tiers. Such players are normally able to provide very attractive prices to onchain traders due to their ability to effectively hedge each trade on their side
 
--Open offchain auction sparkles competition among market makers as they see every quote provided by each maker. This gives them them stimulus to outbid each other deriving the best possible price for cow user
+-Open offchain auction sparkles competition among market makers as they see every quote provided by each maker. This gives them the stimulus to outbid each other deriving the best possible price for cow user
 
 Key components used: 
 
@@ -19,9 +19,10 @@ Key components used:
 
 1) Trader on CoW submits his limit order. If it is not matched with other trader, it is passed to solver through CoW driver to find the best available path to settle the trade.
 2) Solver passes data on tokens that require swap to MooMaker offcahin service
-3) Offchain service informs all connected market makers (MMs) about the batch that requires settlements
+3) Offchain service informs all connected market makers (MMs) about the batch that requires onchain settlement
 4) MMs submit their EIP-712 signed bids through websocket to MooMaker offchain service
 5) The best quote out of all provided is displayed to solver as the best solution that he may pick to offer CoW driver as a path
+6) If accepted as the best solution, CoW driver will activate MooMaker smart contract swap function which will check validity of signed quote and execute swap by transfering tokens between the winning MM and CoW driver.
 
 <img width="643" alt="image" src="https://github.com/MooMaker/General-overview/assets/105652074/d7b0ebb1-6a64-44d7-97a5-2821907f530b">
 
