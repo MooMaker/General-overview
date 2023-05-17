@@ -19,7 +19,7 @@ Key components used:
 
 1) Trader on CoW submits his limit order. Batch is formed by the COW driver and sent to  solver as POST request to find the best available path to settle the trade(s) of the batch.
 2) Solver passes data on tokens that require swap to MooMaker offcahin service
-3) Offchain service initiates a MooAuctin with `time_limit` as deadline and informs all connected market makers (MMs) about the list of trades in the batch that require onchain settlement
+3) Offchain service initiates a MooAuction (English Auction) with `time_limit` (sent along request by the COW driver) as deadline and informs all connected market makers (MMs) about the list of trades in the batch that require onchain settlement
 4) MMs submit their EIP-712 signed bids through websocket to MooMaker offchain service
 5) The best quote out of all provided is displayed to solver as the best solution that he may pick to offer CoW driver as a path
 6) If accepted as the best solution, CoW driver will activate MooMaker smart contract swap function which will check validity of signed quote and execute swap by transfering tokens between the winning MM and CoW driver.
