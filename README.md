@@ -3,12 +3,13 @@
 MooMaker introduces framework for individual market makers to price CoW swap user orders through offchain signed bids. A designated CoW solver receives batch data and sends request to makers to swap particular tokens launching an offchain auction. During auction makers submit their EIP-712 signed bids and the best bid is displayed to solver as a solution which he may pick as the best one to pass to CoW driver.   
 
 Purpose of MooMaker:
+- Provide a direct way for market makers to price COW orders with optimized smart contract infrastructure for efficient COW-MM settlement. Current flow for solvers might include RFQ systems like Hashflow that may not be optimized for COW batch settlement due to timing and latency.  
 
--Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at times due to gas costs and limited locked liquidity in the pool. MooMaker gives an opportunity to settle cow batches using private liquidity which is likely to yield better prices on many occasions compared to AMMs
+- Proffesional market makers on centralized exchanges who have high fee tiers are normally able to provide very attractive prices to onchain traders due to their ability to effectively hedge each trade on their side. By providing a last second auction, MooMaker aims to provide market makers with a low latency trading experience which would encourage tight spreads and less exposure to toxic flow. 
 
--Private liquidity may include proffesional market makers on centralized exchanges who have high fee tiers. Such players are normally able to provide very attractive prices to onchain traders due to their ability to effectively hedge each trade on their side
+- Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at all times due to gas costs, limited locked liquidity in the pool,..etc. MooMaker gives an opportunity for a different type of liquidity to exist as an alternative which represenst the most active type of liquidity provision usually found on centralized exchanges. 
 
--Open offchain auction sparkles competition among market makers as they see every quote provided by each maker. This gives them the stimulus to outbid each other deriving the best possible price for cow user
+-Open offchain auction design creates competition among market makers as they see every quote provided by each maker. This gives them the stimulus to outbid each other deriving the best possible price for cow user. Semi-private auction designs are still being researched that would deliver the optmimum experience for the market makers. 
 
 Key components used: 
 
