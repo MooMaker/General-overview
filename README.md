@@ -1,6 +1,6 @@
 # General-overview
 
-MooMaker introduces framework for individual market makers to price CoW swap users through offchain signed bids. A designated CoW solver receives batch data and sends request to makers to swap particular tokens launching an offchain auction. During auction makers submit their EIP-712 signed bids and the best bid is displayed to solver as a solution which he may pick as the best one to pass to CoW driver.   
+MooMaker introduces framework for individual market makers to price CoW swap user orders through offchain signed bids. A designated CoW solver receives batch data and sends request to makers to swap particular tokens launching an offchain auction. During auction makers submit their EIP-712 signed bids and the best bid is displayed to solver as a solution which he may pick as the best one to pass to CoW driver.   
 
 Purpose of MooMaker:
 
@@ -17,9 +17,9 @@ Key components used:
 
 # Flow
 
-1) Trader on CoW submits his limit order. If it is not matched with other trader, it is passed to solver through CoW driver to find the best available path to settle the trade.
+1) Trader on CoW submits his limit order. Batch is formed by the COW driver and sent to  solver as POST request to find the best available path to settle the trade(s) of the batch.
 2) Solver passes data on tokens that require swap to MooMaker offcahin service
-3) Offchain service informs all connected market makers (MMs) about the batch that requires onchain settlement
+3) Offchain service initiates a MooAuctin with `time_limit` as deadline and informs all connected market makers (MMs) about the list of trades in the batch that require onchain settlement
 4) MMs submit their EIP-712 signed bids through websocket to MooMaker offchain service
 5) The best quote out of all provided is displayed to solver as the best solution that he may pick to offer CoW driver as a path
 6) If accepted as the best solution, CoW driver will activate MooMaker smart contract swap function which will check validity of signed quote and execute swap by transfering tokens between the winning MM and CoW driver.
