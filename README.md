@@ -9,7 +9,7 @@ Purpose of MooMaker:
 
 - Currently AMM pools are the main liquidity source to settle any unmatched orders on CoW. Settling with AMM protocols may not be optimal at all times due to gas costs, limited locked liquidity in the pool,..etc. MooMaker gives an opportunity for a different type of liquidity to exist as an alternative which represenst the most active type of liquidity provision usually found on centralized exchanges. 
 
--Open offchain auction design creates competition among market makers as they see every quote provided by each maker. This gives them the stimulus to outbid each other deriving the best possible price for cow user. Semi-private auction designs are still being researched that would deliver the optmimum experience for the market makers. 
+- Open offchain auction design creates competition among market makers as they see every quote provided by each maker. This gives them the stimulus to outbid each other deriving the best possible price for cow user. Semi-private auction designs are still being researched that would deliver the optmimum experience for the market makers. 
 
 Key components used: 
 
